@@ -1,3 +1,3 @@
-*.tsv
-scripts/
-cast_and_crew.csv
+.DS_Store
+data/raw_data/
+data/clean_data/cast_and_crew.csv
