@@ -1,3 +1,4 @@
 .DS_Store
 data/raw_data/
 data/clean_data/cast_and_crew.csv
+secrets_wtm.py
