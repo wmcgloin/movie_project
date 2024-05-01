@@ -1,0 +1,92 @@
+---
+title: 'Narrative Report: Moovies'
+subtitle: 'DSAN 5200: Data Visualization - Final Project'
+authors: [Billy McGloin, Kang Liu, JaeHo Bahng, Isfar Baset]
+date: last-modified
+date-format: long
+format:
+  html:
+    self-contained: true
+    toc: true
+    code-overflow: wrap
+    code-fold: true
+---
+
+# Introduction
+
+Movies significantly shape cultures, influence attitudes, and engage diverse audiences. Their universal appeal allows them to resonate with audiences of all ages, genders, races, and backgrounds, making them a vital component of cultural discourse and an impactful medium across the globe.
+
+Our project aims to explore the movie industry in depth, delving into various aspects, including its growth over time, the influence of different genres, and individual movie characteristics. The dashboard we created is a comprehensive tool that provides a deep dive into various movie metrics using data sourced from IMDb datasets, web scraping, and APIs. It's designed to offer a user-driven experience, allowing exploration across different levels of analysis.
+
+This report will serve as a narrative guide for this project, highlighting key findings and design choices throughout the dashboard.
+
+# Design Considerations
+
+Our group built the entire dashboard using JavaScript, despite having no prior experience with the language. This accomplishment reflects our adaptability and dedication to the project. We also aimed to minimize text on the dashboard itself, leading to two important decisions:
+
+1. <b>Narrative Report:</b> This report acts as a comprehensive guide, providing context and explanations for each aspect of the dashboard.
+2. <b>Question Mark Tooltips:</b> On each dashboard page, question mark tooltips in the bottom right corners serve as guides or captions, offering users additional information about each element.
+
+# Data Sources
+
+The data powering our dashboard is drawn from several sources:
+
+- <b>IMDb Datasets:</b> The initial bulk of information comes from IMDb-provided CSV files, giving a snapshot of the industry.
+- <b>Web Scraping:</b> Using Beautiful Soup and Selenium, we scraped IMDb for additional data points, particularly box office statistics and filming locations.
+- <b>APIs:</b> Assorted APIs were used to gather and process movie scripts, allowing for further analysis, such as sentiment polarity.
+
+# Dashboard Overview
+
+## Home Page
+
+The Home Page provides a high-level overview of the movie industry, offering a comprehensive snapshot through several key elements. The design choice behind this page was to provide a balanced, multi-dimensional view of the industry, illustrating various levels of analysis, from the overall industry to individual movies. This holistic perspective sets the stage for deeper dives on subsequent pages.
+
+![Home Page of Dashboard](home.png)
+
+- <b>Total Movies and Box Office:</b> The top section summarizes the number of movies in the dataset, the movies scraped from IMDb, and those for which scripts were available. This metadata sets the stage for deeper analysis.
+- <b>Titles and Unique Workers Over Time:</b> This graph shows the number of movie releases and unique cast and crew over time. The upward trend emphasizes the industry's growing influence and cultural impact, despite setbacks like the COVID-19 pandemic.
+- <b>Ratings Distribution:</b> This graph illustrates the distribution of average movie ratings across popular genres, each represented by a distinct color band. A noticeable peak around ratings of 6 to 7 highlights how different genres resonate with audiences, showcasing their varying appeals.
+- <b>Cast Filter:</b> This filter highlights the top ten cast and crew members based on the number of rating votes and the average rating for each movie they have worked on, allowing users to adjust filters to see which individuals are most prominent.
+- <b>Budget vs. Box Office:</b> A scatter plot displaying the correlation between a movie's budget and its box office earnings, with sliders allowing for filtering based on budget ranges.
+
+## Genre Page
+
+The Genre Page explores the different movie genres, their performance over time, and their characteristics. The design choice here was to dive deeper into the industry, exploring how genres compare and evolve while allowing users to look for information regarding their favorite genre.
+
+![Genres Page of Dashboard](genres.png)
+
+- <b>Sentiment Polarity:</b> A bar plot shows the average sentiment polarity of movie genre scripts, comparing 2010 and 2020, revealing trends in tone and storytelling. We can see that the sentiment increased from 2010 to 2020 across all genres.
+- <b>Box Office Performance:</b> A line plot displays the sum of each genre's earnings over time, allowing for comparisons and trends in financial performance. This plot displays how action and adventure have dominated the box office for the past two decades.
+- <b>Statistics:</b> The middle row showcases rankings for average box office, box office/budget ratio, and more, revealing differences in profitability and production. Our team did not find it surprising that biographies, animation, and horror had the best budget-to-box office ratios.
+- <b>Movies Released Over Time:</b> This graph illustrates the number of films released over time, color-coded by genre, highlighting the prevalence and evolution of different genres.
+- <b>Genre Chord:</b> This visualization shows the distribution and interactions between genres, highlighting their overlap and the formation of hybrid genres. For instance, movies can belong to multiple genres, such as romance-comedy or action-thriller, reflecting the diverse nature of film storytelling.
+- <b>Average Rating Over Time:</b> This graph displays the average rating trends for five popular genres, revealing a general decline, suggesting an increase in quantity may affect quality.
+
+## Titles Page
+
+The Titles Page provides a movie-specific focus, allowing users to search for a movie title. The design choice here was to enable users to delve into individual movies, explore specific details, and potentially uncover new insights about their favorite films.
+
+![Titles Page of Dashboard](titles.png)
+
+- <b>Filming Locations Map:</b> Displays filming locations for the selected movie, with cows as markers reflecting the project's theme.
+- <b>Box Office and Budget:</b> The top right box shows the selected movie's box office and budget, providing a financial snapshot.
+- <b>Cast & Crew:</b> A scrolling list displays the cast and crew, mimicking movie credits.
+- <b>Comparison Graphs:</b> Static graphs contrast the selected movie's rating and release year relative to others, providing context.
+
+# Narratives
+
+## The Growth of the Movie Industry and its Impact on Quality
+
+The movie industry has seen a substantial uptick in the number of films produced over the years, as illustrated by various graphs throughout the dashboard. The Genre Page shows how the increase in movie production has coincided with a decline in average ratings for several popular genres. This suggests that the industry's focus on quantity may have led to a potential drop in overall quality. The declining trend in ratings could indicate that the influx of new movies may have diluted the market, leading to a broader range of quality, from exceptional to subpar.
+
+## Positive Sentiment Trends Across Genres
+
+The Genre Page's Sentiment Polarity graph reveals an upward trend in positivity across all analyzed genres between 2010 and 2020. This suggests that movies might increasingly serve as a form of escapism for audiences. With the world facing numerous challenges over the past decade, the positive sentiment in movie scripts could reflect an effort to provide uplifting narratives that resonate with viewers seeking solace and joy. This trend highlights the role of cinema in offering narratives that can boost morale and offer a break from reality.
+
+## Genre Preferences and Profitability
+
+The dashboard reveals intriguing insights into the interplay between genre preferences and profitability. The Genre Page's statistics and line plot illustrate how different genres vary in terms of financial success and popularity. Action and adventure genres have dominated the box office for the past two decades, while statistics show that biographies, animation, and horror have the best budget-to-box office ratios. This dynamic reveals that profitability and popularity don't always align, reflecting how the movie industry can balance artistic vision and commercial success.
+
+# Conclusion
+
+The dashboard provides several narratives, from the movie industry's growth to sentiment polarity trends and quality concerns. Users can explore the dashboard to gain insights into the movie industry's dynamics, genre preferences, and the interplay between profitability and popularity. Our design choices aim to create an intuitive, informative and personal experience, allowing users to investigate various aspects of the film industry.
